@@ -20,7 +20,7 @@ function App() {
             bahasa pemrograman, library, dan framework.
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
-            <a href="../public/assets/cvrifqi.png" className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600">Lihat CV Saya <i className="ri-arrow-right-fill ml-1 ri-lg"></i></a>
+            <a href={DataImage.cv} className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600">Lihat CV Saya <i className="ri-arrow-right-fill ml-1 ri-lg"></i></a>
             <a href="#proyek" className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600">Lihat Proyek <i className="ri-arrow-down-line ml-1 ri-lg"></i></a>
           </div>
         </div>
