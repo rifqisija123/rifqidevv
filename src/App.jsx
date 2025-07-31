@@ -1,5 +1,5 @@
 import DataImage from "./data"
-import { listTools, listProyek } from "./data"
+import { listTools, listProyek, listSertifikat } from "./data"
 
 function App() {
 
@@ -66,6 +66,19 @@ function App() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Sertifikat section */}
+      <div className="sertifikat mt-32 py-10" id="sertifikat">
+        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000">Sertifikat</h1>
+        <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Berikut ini adalah beberapa sertifikat pencapaian saya</p>
+        <div className="sertifikat-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+          {listSertifikat.map((sertifikat) => (
+            <div key={sertifikat.id} className="p-4 bg-zinc-800 rounded-lg shadow-lg shadow-black/30 flex flex-col h-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={sertifikat.delay}>
+              <img src={sertifikat.gambar} alt="Sertifikat Image" loading="lazy" />
+            </div>
+          ))}
         </div>
       </div>
 

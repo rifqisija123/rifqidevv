@@ -203,3 +203,97 @@ export const listProyek = [
     delay: "600",
   },
 ];
+
+import sertifikat1 from "/assets/sertifikat/164_Sertifikat_Mikrokontroler_Arduino_Uno.png";
+import sertifikat2 from "/assets/sertifikat/167_Sertifikat_Dasar-Dasar_Pemrograman_C++.png";
+import sertifikat3 from "/assets/sertifikat/240_Sertifikat_Robotic_IoT.png";
+import sertifikat4 from "/assets/sertifikat/245_Sertifikat_Robotic_Mikrokontroler.png";
+import sertifikat5 from "/assets/sertifikat/537_Sertifikat_Basic_Figma_Pembuatan_Aplikasi_Mobile.png";
+import sertifikat6 from "/assets/sertifikat/544_Mikrokontroler_Sertifikat_Raspberry_Pi.png";
+import sertifikat7 from "/assets/sertifikat/api.png";
+import sertifikat8 from "/assets/sertifikat/dicoding1.png";
+import sertifikat9 from "/assets/sertifikat/dicoding2.png";
+import sertifikat10 from "/assets/sertifikat/dicoding3.png";
+import sertifikat11 from "/assets/sertifikat/git.png";
+import sertifikat12 from "/assets/sertifikat/laravel.png";
+import sertifikat13 from "/assets/sertifikat/mongodb.png";
+import sertifikat14 from "/assets/sertifikat/pemrograman.png";
+import sertifikat15 from "/assets/sertifikat/terminal.png";
+
+export const listSertifikat = [
+  {
+    id: 1,
+    gambar: sertifikat1,
+    delay: "100",
+  },
+  {
+    id: 2,
+    gambar: sertifikat2,
+    delay: "200",
+  },
+  {
+    id: 3,
+    gambar: sertifikat3,
+    delay: "300",
+  },
+  {
+    id: 4,
+    gambar: sertifikat4,
+    delay: "400",
+  },
+  {
+    id: 5,
+    gambar: sertifikat5,
+    delay: "500",
+  },
+  {
+    id: 6,
+    gambar: sertifikat6,
+    delay: "600",
+  },
+  {
+    id: 7,
+    gambar: sertifikat7,
+    delay: "700",
+  },
+  {
+    id: 8,
+    gambar: sertifikat8,
+    delay: "800",
+  },
+  {
+    id: 9,
+    gambar: sertifikat9,
+    delay: "900",
+  },
+  {
+    id: 10,
+    gambar: sertifikat10,
+    delay: "1000",
+  },
+  {
+    id: 11,
+    gambar: sertifikat11,
+    delay: "1100",
+  },
+  {
+    id: 12,
+    gambar: sertifikat12,
+    delay: "1200",
+  },
+  {
+    id: 13,
+    gambar: sertifikat13,
+    delay: "1300",
+  },
+  {
+    id: 14,
+    gambar: sertifikat14,
+    delay: "1400",
+  },
+  {
+    id: 15,
+    gambar: sertifikat15,
+    delay: "1500",
+  },
+];
