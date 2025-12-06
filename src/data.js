@@ -145,7 +145,7 @@ import Proyek2 from "/assets/proyek/sihadir.png";
 import Proyek3 from "/assets/proyek/chees.png";
 import Proyek4 from "/assets/proyek/mawquiz.png";
 import Proyek5 from "/assets/proyek/store.png";
-import Proyek6 from "/assets/proyek/portfolio.png";
+import Proyek6 from "/assets/proyek/wadah.png";
 
 export const listProyek = [
   {
@@ -196,10 +196,10 @@ export const listProyek = [
   {
     id: 6,
     gambar: Proyek6,
-    nama: "Web Portofolio",
-    desk: "Website Portofolio ini adalah website yang saya buat untuk menampilkan portofolio saya, dan juga sebagai tempat untuk belajar NextJS dan TailwindCSS.",
-    tech: ["NextJS", "TailwindCSS", "Framermotion"],
-    link: "https://rifqitarmono.vercel.app",
+    nama: "Inovasi WADAH",
+    desk: "Website WADAH ini dibuat untuk pembelian air Kopi atau Teh dengan sistem pembayaran QRIS dengan menggunakan metode Payment Gateway Midtrans. Harga terjangkau sesuai dengan masing-masing volume",
+    tech: ["Laravel", "TailwindCSS", "MySQL", "Midtrans"],
+    link: "https://wadah.smkn9kotabekasi.sch.id",
     delay: "600",
   },
 ];

@@ -14,9 +14,9 @@ function App() {
           </div>
           <h1 className="text-4xl/tight font-bold mb-6">Rifqi Ainur Rahman Tarmono</h1>
           <p className="text-base/loose mb-6 opacity-50">
-            Saya seorang siswa SMKN 9 Kota Bekasi Kelas 12, jurusan Sistem Informasi Jaringan dan Aplikasi.
+            Saya adalah lulusan SMKN 9 Kota Bekasi dengan jurusan Sistem Informasi Jaringan dan Aplikasi.
             Saya memiliki ketertarikan dalam pengembangan Web, IoT, dan teknologi lainnya. Di Jurusan ini saya
-            sedang mendalami sebuah divisi yaitu Web Developer. Saya telah mendalami banyak
+            sedang mendalami sebuah divisi yaitu Fullstack Web Developer. Saya telah mendalami banyak
             bahasa pemrograman, library, dan framework.
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
@@ -32,19 +32,20 @@ function App() {
         <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg shadow-lg shadow-black/30 flex flex-col gap-6" data-aos="fade-up" data-aos-duration="1000">
           <h1 className="text-3xl/tight font-bold mb-4">Tentang Saya</h1>
           <p className="text-base/loose mb-4 opacity-50">
-            Saya Bersekolah di SMKN 9 Kota Bekasi Kelas 12 Jurusan Sistem Informasi Jaringan dan Aplikasi (SIJA).
-            Saya di bidang IT saya memegang Role di Web Developer dalam menangani sebuah Website atau Aplikasi.
+            Saya Lulusan SMK dengan Jurusan Sistem Informasi Jaringan dan Aplikasi (SIJA).
+            Saya di bidang IT saya memegang Role di Fullstack Web Developer dalam menangani sebuah Website atau Aplikasi.
+            Saya mempunyai pengalaman 1 tahun sebagai Fullstack Web Developer di berbagai perusahan atau instansi sebelumnya.
             Saya telah banyak mencoba keahlian dan berbagai macam projek yang pernah saya sudah pegang.
             Contohnya saya mendalami Bahasa Pemrograman seperti C++, JavaScript, PHP, TypeScript, Python.
             Saya juga telah menciptakan banyak project yaitu Membuat Sistem
-            Absensi, Membuat Running Text, Membuat Smart Trash, Membuat Aplikasi Kasir, Membuat Aplikasi Market Place Sekolah.
+            Absensi, Membuat Running Text, Membuat Smart Trash, Membuat Aplikasi Kasir, Membuat Aplikasi Market Place Sekolah, Membuat Aplikasi Relawan.
           </p>
           <div className="flex items-center justify-between">
             <img src={DataImage.HeroImage} alt="Hero Image" className="w-12 rounded-md" loading="lazy" />
             <div className="flex items-center gap-6">
               <div>
                 <h1 className="text-4xl mb-1">
-                  5<span className="text-violet-500">+</span>
+                  10<span className="text-violet-500">+</span>
                 </h1>
                 <p>Proyek Selesai</p>
               </div>
