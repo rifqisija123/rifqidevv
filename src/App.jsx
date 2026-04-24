@@ -1,7 +1,9 @@
+import { useState } from "react"
 import DataImage from "./data"
 import { listTools, listProyek, listSertifikat } from "./data"
 
 function App() {
+  const [selectedImage, setSelectedImage] = useState(null)
 
   return (
     <>
@@ -33,12 +35,13 @@ function App() {
           <h1 className="text-3xl/tight font-bold mb-4">Tentang Saya</h1>
           <p className="text-base/loose mb-4 opacity-50">
             Saya Lulusan SMK dengan Jurusan Sistem Informasi Jaringan dan Aplikasi (SIJA).
-            Saya di bidang IT saya memegang Role di Fullstack Web Developer dalam menangani sebuah Website atau Aplikasi.
-            Saya mempunyai pengalaman 1 tahun sebagai Fullstack Web Developer di berbagai perusahan atau instansi sebelumnya.
-            Saya telah banyak mencoba keahlian dan berbagai macam projek yang pernah saya sudah pegang.
-            Contohnya saya mendalami Bahasa Pemrograman seperti C++, JavaScript, PHP, TypeScript, Python.
+            Saya mempunyai pengalaman 1 tahun sebagai Software Engineer di berbagai perusahan atau instansi sebelumnya.
+            Saya memiliki pengalaman yang sesuai dengan kualifikasi yang dicari oleh perusahaan khususnya dalam bidang IT, termasuk pengembangan perangkat lunak,
+            pengolahan data, dan manajemen sistem, yang relevan dengan kebutuhan perusahaan.
+            Saya suka mencoba dan mempelajari hal baru yang belum pernah saya coba.
+            Selain itu, saya mampu mengatur waktu dengan baik, dapat bekerja secara individu maupun dalam tim, serta menyelesaikan pekerjaan dengan tepat waktu.
             Saya juga telah menciptakan banyak project yaitu Membuat Sistem
-            Absensi, Membuat Running Text, Membuat Smart Trash, Membuat Aplikasi Kasir, Membuat Aplikasi Market Place Sekolah, Membuat Aplikasi Relawan.
+            Absensi, Membuat Running Text, Membuat Smart Trash, Membuat Aplikasi Kasir, Membuat Aplikasi Market Place Sekolah, Membuat Aplikasi Relawan, dan Membuat Aplikasi WADAH.
           </p>
           <div className="flex items-center justify-between">
             <img src={DataImage.HeroImage} alt="Hero Image" className="w-12 rounded-md" loading="lazy" />
@@ -76,8 +79,26 @@ function App() {
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Berikut ini adalah beberapa sertifikat pencapaian saya</p>
         <div className="sertifikat-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {listSertifikat.map((sertifikat) => (
-            <div key={sertifikat.id} className="p-4 bg-zinc-800 rounded-lg shadow-lg shadow-black/30 flex flex-col h-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={sertifikat.delay}>
-              <img src={sertifikat.gambar} alt="Sertifikat Image" loading="lazy" />
+            <div 
+              key={sertifikat.id} 
+              className="p-4 bg-zinc-800 rounded-lg shadow-lg shadow-black/30 flex flex-col h-full overflow-hidden group cursor-pointer" 
+              data-aos="fade-up" 
+              data-aos-duration="1000" 
+              data-aos-delay={sertifikat.delay}
+              onClick={() => setSelectedImage(sertifikat.gambar)}
+            >
+              <div className="relative overflow-hidden rounded-md h-full">
+                <img 
+                  src={sertifikat.gambar} 
+                  alt="Sertifikat Image" 
+                  loading="lazy" 
+                  className="group-hover:scale-110 transition-all duration-500 h-full object-cover" 
+                />
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-2">
+                  <i className="ri-search-2-line text-white text-3xl animate__animated animate__zoomIn animate__faster"></i>
+                  <p className="text-white font-semibold text-sm">Lihat Detail</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -132,6 +153,22 @@ function App() {
           </div>
         </form>
       </div>
+      {/* Modal Popup Gambar */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/90 backdrop-blur-md p-4 animate__animated animate__fadeIn animate__faster"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-5xl w-full flex justify-center items-center">
+            <img 
+              src={selectedImage} 
+              alt="Sertifikat Detail" 
+              className="max-h-[90vh] max-w-full rounded-lg shadow-2xl animate__animated animate__zoomIn animate__faster" 
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
     </>
   )
 }
