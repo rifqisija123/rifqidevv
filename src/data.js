@@ -1,5 +1,5 @@
 import HeroImage from "/assets/hero-img.jpg";
-import cv from "/assets/cvrifqi.png";
+import cv from "/assets/CV_Rifqi.pdf";
 
 const Image = {
   HeroImage,

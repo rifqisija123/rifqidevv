@@ -121,7 +121,7 @@ function App() {
                   ))}
                 </div>
                 <div className="text-center mt-auto">
-                  <a href={proyek.link} className="bg-violet-700 p-3 rounded-lg block border border-zinc-600 hover:bg-violet-600">Lihat Website</a>
+                  <a href={proyek.link} target="_blank" rel="noopener noreferrer" className="bg-violet-700 p-3 rounded-lg block border border-zinc-600 hover:bg-violet-600">Lihat Website</a>
                 </div>
               </div>
             </div>
