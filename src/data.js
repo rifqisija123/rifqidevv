@@ -1,5 +1,7 @@
 import HeroImage from "/assets/hero-img.jpg";
 import cv from "/assets/CV_Rifqi.pdf";
+import smkn9 from "/assets/smkn9.png";
+import sija from "/assets/sija.png";
 
 const Image = {
   HeroImage,
@@ -219,6 +221,12 @@ import sertifikat12 from "/assets/sertifikat/laravel.png";
 import sertifikat13 from "/assets/sertifikat/mongodb.png";
 import sertifikat14 from "/assets/sertifikat/pemrograman.png";
 import sertifikat15 from "/assets/sertifikat/terminal.png";
+import sertifikat16 from "/assets/sertifikat/ibm.png";
+import sertifikat17 from "/assets/sertifikat/kihajarstem.png";
+import sertifikat18 from "/assets/sertifikat/desain_uiux.png";
+import sertifikat19 from "/assets/sertifikat/datacenter.png";
+import sertifikat20 from "/assets/sertifikat/ngfw.png";
+import sertifikat21 from "/assets/sertifikat/linux.png";
 
 export const listSertifikat = [
   {
@@ -296,4 +304,66 @@ export const listSertifikat = [
     gambar: sertifikat15,
     delay: "1500",
   },
+  {
+    id: 16,
+    gambar: sertifikat16,
+    delay: "1600",
+  },
+  {
+    id: 17,
+    gambar: sertifikat17,
+    delay: "1700",
+  },
+  {
+    id: 18,
+    gambar: sertifikat18,
+    delay: "1800",
+  },
+  {
+    id: 19,
+    gambar: sertifikat19,
+    delay: "1900",
+  },
+  {
+    id: 20,
+    gambar: sertifikat20,
+    delay: "2000",
+  },
+  {
+    id: 21,
+    gambar: sertifikat21,
+    delay: "2100",
+  },
+];
+
+export const listPendidikan = [
+  {
+    id: 1,
+    instansi: "SMKN 9 Kota Bekasi",
+    jurusan: "Sistem Informasi Jaringan dan Aplikasi (SIJA)",
+    tahun: "Juli 2022 - Mei 2026",
+    logoSekolah: smkn9,
+    logoJurusan: sija,
+    deskripsi: "Program unggulan 4 tahun yang setara dengan Diploma 1 (D1), fokus pada pengembangan perangkat lunak, infrastruktur jaringan, cloud computing, dan Internet of Things (IoT). Menerapkan metode Project-Based Learning (PBL) dengan kurikulum yang mencakup 3 tahun pembelajaran intensif dan 1 tahun praktik industri guna mencetak tenaga profesional yang siap kerja di ekosistem teknologi modern.",
+    delay: "600",
+  }
+];
+
+export const listPengalaman = [
+  {
+    id: 1,
+    posisi: "Software Engineer",
+    perusahaan: "PT. Semesta Mahadata Indonesia",
+    tahun: "Juni 2025 - Maret 2026",
+    deskripsi: "Mengembangkan aplikasi Management Barang (SIMAS) serta sistem PMB dan Akademik STIH. Bertanggung jawab dalam perancangan database, implementasi fitur CRUD kompleks, integrasi API menggunakan Laravel Sanctum & Swagger, serta pengembangan UI yang responsif.",
+    delay: "600",
+  },
+  {
+    id: 2,
+    posisi: "Backend Developer",
+    perusahaan: "PT. Mirrorim Jaya",
+    tahun: "Juli 2024 - Oktober 2024",
+    deskripsi: "Merancang alur kerja sistem isi ulang air otomatis dan mengembangkan sistem pembayaran menggunakan Midtrans. Melakukan desain DFD serta analisis proses bisnis secara end-to-end untuk efisiensi sistem.",
+    delay: "800",
+  }
 ];
