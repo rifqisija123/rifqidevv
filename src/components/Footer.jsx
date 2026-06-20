@@ -23,6 +23,12 @@ const Footer = () => {
                 <a href="https://www.youtube.com/@rifqigaming07">
                     <i className='ri-youtube-fill ri-2x'></i>
                 </a>
+                <a href="https://wa.me/6282114512403">
+                    <i className='ri-whatsapp-fill ri-2x'></i>
+                </a>
+                <a href="mailto:rifqiainurrahmant@gmail.com">
+                    <i className='ri-mail-fill ri-2x'></i>
+                </a>
             </div>
         </div>
     )

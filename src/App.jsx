@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation'
 import Tilt from "react-parallax-tilt"
 import ParticlesBg from "./components/ParticlesBg"
 import DataImage from "./data"
-import { listTools, listProyek, listSertifikat, listPendidikan, listPengalaman } from "./data"
+import { listTools, listProyek, listSertifikat, listPendidikan, listPengalaman, listSoftSkills } from "./data"
 
 function App() {
   const [selectedImage, setSelectedImage] = useState(null)
@@ -39,11 +39,15 @@ function App() {
               repeat={Infinity}
             />
           </div>
+          <div className="flex flex-wrap gap-4 mb-4 text-sm font-medium opacity-80">
+            <span className="flex items-center gap-1.5"><i className="ri-map-pin-line text-violet-500"></i> Kota Bekasi</span>
+            <span className="flex items-center gap-1.5"><i className="ri-calendar-line text-violet-500"></i> 08 April 2007</span>
+          </div>
           <p className="text-base/loose mb-6 opacity-50">
             Saya adalah lulusan SMKN 9 Kota Bekasi dengan jurusan Sistem Informasi Jaringan dan Aplikasi.
             Saya memiliki ketertarikan dalam pengembangan Web, IoT, dan teknologi lainnya. Di Jurusan ini saya
-            sedang mendalami sebuah divisi yaitu Fullstack Web Developer. Saya telah mendalami banyak
-            bahasa pemrograman, library, dan framework.
+            sedang mendalami sebuah divisi yaitu Fullstack Web Developer. Saya telah menguasai banyak
+            bahasa pemrograman, library, tools atau software, dan framework.
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a href={DataImage.cv} className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600">Lihat CV Saya <i className="ri-arrow-right-fill ml-1 ri-lg"></i></a>
@@ -59,7 +63,7 @@ function App() {
           <motion.img 
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            src={DataImage.HeroImage} 
+            src={DataImage.FotoRifqi} 
             alt="Hero Image" 
             className="w-[500px] md:ml-auto rounded-md" 
             loading="lazy" 
@@ -80,6 +84,7 @@ function App() {
             Selain itu, saya mampu mengatur waktu dengan baik, dapat bekerja secara individu maupun dalam tim, serta menyelesaikan pekerjaan dengan tepat waktu.
             Saya juga telah menciptakan banyak project yaitu Membuat Sistem
             Absensi, Membuat Running Text, Membuat Smart Trash, Membuat Aplikasi Kasir, Membuat Aplikasi Market Place Sekolah, Membuat Aplikasi Relawan, dan Membuat Aplikasi WADAH.
+            Saya juga terampil dalam mendesain antarmuka aplikasi (UI/UX) menggunakan format atau alat lain yang serupa dengan yang digunakan untuk memvisualisasikan aplikasi sebelum diterjemahkan ke dalam kode (pemrograman).
           </p>
           <div className="flex items-center justify-between">
             <img src={DataImage.HeroImage} alt="Hero Image" className="w-12 rounded-md" loading="lazy" />
@@ -126,7 +131,14 @@ function App() {
                 <h3 className="text-xl font-bold mb-1">{edu.instansi}</h3>
                 <h4 className="text-violet-500 font-medium mb-2">{edu.jurusan}</h4>
                 <span className="text-xs bg-violet-700/20 text-violet-400 px-3 py-1 rounded-full whitespace-nowrap inline-block mb-4">{edu.tahun}</span>
-                <p className="text-sm opacity-50 leading-relaxed mb-8">{edu.deskripsi}</p>
+                <p className="text-sm opacity-50 leading-relaxed mb-4">{edu.deskripsi}</p>
+                {edu.poinPembelajaran && (
+                  <ul className="text-sm opacity-70 leading-relaxed mb-8 list-disc list-inside space-y-1">
+                    {edu.poinPembelajaran.map((poin, index) => (
+                      <li key={index} className="text-violet-300/80">{poin}</li>
+                    ))}
+                  </ul>
+                )}
                 
                 <div className="flex gap-6 items-center">
                   <div className="p-4 bg-white/5 rounded-2xl border border-zinc-700/50 group-hover:border-violet-500/50 transition-colors">
@@ -154,6 +166,26 @@ function App() {
                 <div>
                   <h4 className="font-bold">{tool.nama}</h4>
                   <p className="opacity-50">{tool.ket}</p>
+                </div>
+              </div>
+            </Tilt>
+          ))}
+        </div>
+      </div>
+
+      {/* Soft Skills Section */}
+      <div className="soft-skills mt-32 py-10" id="soft-skills">
+        <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration="1000">Soft Skills Saya</h1>
+        <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Berikut ini beberapa soft skills yang saya miliki untuk menunjang pekerjaan dan kolaborasi</p>
+        <div className="soft-skills-box mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+          {listSoftSkills.map((skill) => (
+            <Tilt key={skill.id} tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.02}>
+              <div className="flex items-start gap-4 p-5 border border-zinc-600 rounded-xl bg-zinc-800/50 hover:bg-zinc-800 hover:border-violet-500 transition-all group h-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={skill.delay}>
+                <div className="bg-violet-500/20 p-3 rounded-lg text-violet-500 group-hover:bg-violet-500 group-hover:text-white transition-colors">
+                  <i className="ri-checkbox-circle-fill ri-xl"></i>
+                </div>
+                <div>
+                  <p className="font-medium text-base/relaxed leading-relaxed">{skill.deskripsi}</p>
                 </div>
               </div>
             </Tilt>
@@ -221,7 +253,7 @@ function App() {
 
       {/* Contact section */}
       <div className="contact mt-32 sm:p-10 p-0" id="contact">
-        <h1 className="text-4xl mb-2 font-bold text-center" data-aos="fade-up" data-aos-duration="1000">Contact</h1>
+        <h1 className="text-4xl mb-2 font-bold text-center" data-aos="fade-up" data-aos-duration="1000">Contact Me</h1>
         <p className="text-base/loose text-center mb-10 opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Berikan saran dan pesan anda</p>
         <form action="https://formsubmit.co/rifqiainurrahmant@gmail.com" method="POST" className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-lg shadow-lg shadow-black/30" autoComplete="off" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
           <div className="flex flex-col gap-6">

@@ -1,10 +1,12 @@
 import HeroImage from "/assets/hero-img.jpg";
+import FotoRifqi from "/assets/foto-portofolio-rifqi.jpeg"
 import cv from "/assets/CV_Rifqi.pdf";
 import smkn9 from "/assets/smkn9.png";
 import sija from "/assets/sija.png";
 
 const Image = {
   HeroImage,
+  FotoRifqi,
   cv,
 };
 
@@ -345,6 +347,15 @@ export const listPendidikan = [
     logoSekolah: smkn9,
     logoJurusan: sija,
     deskripsi: "Program unggulan 4 tahun yang setara dengan Diploma 1 (D1), fokus pada pengembangan perangkat lunak, infrastruktur jaringan, cloud computing, dan Internet of Things (IoT). Menerapkan metode Project-Based Learning (PBL) dengan kurikulum yang mencakup 3 tahun pembelajaran intensif dan 1 tahun praktik industri guna mencetak tenaga profesional yang siap kerja di ekosistem teknologi modern.",
+    poinPembelajaran: [
+      "Mempelajari Sistem Internet of Things (IoT)",
+      "Mempelajari Konfigurasi Dasar Mikrotik",
+      "Mempelajari Pengembangan Aplikasi Web dan Mobile",
+      "Mempelajari Penyambungan Fiber Optic",
+      "Mempelajari Perakitan Komputer (PC)",
+      "Mempelajari Desain UI/UX",
+      "Mempelajari Pemrograman Dasar"
+    ],
     delay: "600",
   }
 ];
@@ -366,4 +377,42 @@ export const listPengalaman = [
     deskripsi: "Merancang alur kerja sistem isi ulang air otomatis dan mengembangkan sistem pembayaran menggunakan Midtrans. Melakukan desain DFD serta analisis proses bisnis secara end-to-end untuk efisiensi sistem.",
     delay: "800",
   }
+];
+
+export const listSoftSkills = [
+  {
+    id: 1,
+    deskripsi: "Mampu bekerja dengan tim maupun individual",
+    delay: "100",
+  },
+  {
+    id: 2,
+    deskripsi: "Mampu bertanggung jawab dan memiliki komitmen terhadap pekerjaan",
+    delay: "200",
+  },
+  {
+    id: 3,
+    deskripsi: "Menyelesaikan pekerjaan dengan tepat waktu",
+    delay: "300",
+  },
+  {
+    id: 4,
+    deskripsi: "Mampu berkomunikasi dengan jelas, baik secara lisan maupun tulisan",
+    delay: "400",
+  },
+  {
+    id: 5,
+    deskripsi: "Mampu memecahkan masalah pada pekerjaan dan berfikir kritis",
+    delay: "500",
+  },
+  {
+    id: 6,
+    deskripsi: "Mampu beradaptasi dengan cepat terhadap lingkungan kerja yang dinamis",
+    delay: "600",
+  },
+  {
+    id: 7,
+    deskripsi: "Mampu bekerja di bawah tekanan dan juga terbiasa dengan target",
+    delay: "700",
+  },
 ];
