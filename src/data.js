@@ -150,14 +150,16 @@ import Proyek3 from "/assets/proyek/chees.png";
 import Proyek4 from "/assets/proyek/mawquiz.png";
 import Proyek5 from "/assets/proyek/store.png";
 import Proyek6 from "/assets/proyek/wadah.png";
+import Proyek7 from "/assets/proyek/pmb.png";
+import Proyek8 from "/assets/proyek/stih.png";
 
 export const listProyek = [
   {
     id: 1,
     gambar: Proyek1,
     nama: "Market Places Koperasi Sekolah",
-    desk: "Website Market Place ini saya buat dengan menggunakan tech stack Bootstrap untuk Frontend dan Laravel untuk Backend, serta MySQL untuk Databases.",
-    tech: ["Laravel", "Bootstrap", "MySQL", "Redis"],
+    desk: "Platform Market Place komprehensif untuk Koperasi Sekolah. Dibangun menggunakan arsitektur REST API dengan Laravel sebagai Backend, serta Bootstrap dan jQuery di sisi Frontend. Sistem ini mendukung autentikasi SSO via Google OAuth, integrasi caching dengan Redis, serta fitur real-time chat interaktif antar pengguna menggunakan Socket.IO. Environment aplikasi di-deploy secara terisolasi menggunakan Docker.",
+    tech: ["Laravel", "Bootstrap", "MySQL", "Redis", "Docker", "jQuery", "Socket.IO", "REST API", "OAuth"],
     link: "#",
     delay: "100",
   },
@@ -165,8 +167,8 @@ export const listProyek = [
     id: 2,
     gambar: Proyek2,
     nama: "Sistem Absensi SiHadir",
-    desk: "Website ini dibuat untuk melihat data rekap absensi guru, yang mana API nya ini terkoneksi dengan alat-alat IoT menggunakan RFID dan dibuat juga dengan Laravel dan Bootstrap.",
-    tech: ["Laravel", "Bootstrap", "MySQL"],
+    desk: "Sistem Rekap Absensi Guru berbasis IoT. Absensi ditangkap menggunakan reader RFID dan mikrokontroler ESP32, di mana setiap pemindaian kartu akan mengirim request HTTP ke REST API aplikasi. Aplikasi ini dilengkapi dengan sistem CRUD untuk mengelola data guru (beserta jabatan dan mapel yang diajarkan), serta memiliki fitur export data laporan ke format XLSX, PDF, maupun cetak langsung (Print).",
+    tech: ["Laravel", "Bootstrap", "MySQL", "jQuery", "LiteSpeed"],
     link: "https://sihadir.smkn9kotabekasi.sch.id",
     delay: "200",
   },
@@ -174,7 +176,7 @@ export const listProyek = [
     id: 3,
     gambar: Proyek3,
     nama: "Chess Game",
-    desk: "Website sederhana yang dimana player bisa bermain catur dengan bot (computer). Website ini dibangun dengan Vite + ReactJS dan TailwindCSS untuk Frontend.",
+    desk: "Aplikasi permainan catur online sederhana yang interaktif. Aplikasi ini dilengkapi dengan fitur kustomisasi di mana pemain dapat mengatur atau menyusun posisi bidak catur secara bebas di atas papan. Selain itu, terdapat fitur 'flip board' untuk memutar papan catur dan sistem untuk menjalankan pergerakan permainan catur secara otomatis.",
     tech: ["Vite", "ReactJS", "TailwindCSS"],
     link: "https://rifqisija123.github.io/chess-games",
     delay: "300",
@@ -183,7 +185,7 @@ export const listProyek = [
     id: 4,
     gambar: Proyek4,
     nama: "Mawquiz Game",
-    desk: "Proyek Web3 pertama saya yang dimana website ini menawarkan mode solo dan multipemain yang fleksibel sekaligus meningkatkan pengalaman belajar dan bermain untuk berbagai kebutuhan pengguna.",
+    desk: "Mawquiz Game adalah proyek aplikasi Web3 terdesentralisasi (dApp) yang menawarkan pengalaman belajar dan bermain yang interaktif. Sebagai aplikasi Web3, pengguna diharuskan untuk menghubungkan crypto wallet (seperti MetaMask) terlebih dahulu untuk dapat mengakses permainan. Aplikasi ini menyediakan mode permainan solo dan multipemain yang fleksibel untuk berbagai kebutuhan pengguna.",
     tech: ["TypeScript", "ReactJS", "Solidity", "Metamask"],
     link: "https://cv2ns-7iaaa-aaaac-aac3q-cai.icp0.io",
     delay: "400",
@@ -192,8 +194,8 @@ export const listProyek = [
     id: 5,
     gambar: Proyek5,
     nama: "Web Store",
-    desk: "Website store adalah website dimana pengguna bisa top up game seperti diamond untuk kebutuhan item di dalam game tersebut. Website ini saya buat hanya web statis saja dengan menggunakan HTML, CSS, dan Javascript.",
-    tech: ["HTML", "CSS", "Javascript"],
+    desk: "Platform Store Game tempat pengguna dapat melakukan simulasi pembelian item atau top-up mata uang in-game seperti Diamond. Aplikasi ini merupakan website statis yang difokuskan pada pengembangan antarmuka (UI) interaktif dengan memanfaatkan fungsionalitas DOM secara langsung menggunakan HTML, CSS, JavaScript, dan jQuery murni.",
+    tech: ["HTML", "CSS", "Javascript", "jQuery"],
     link: "https://rifqitarmono.github.io/rifqistore/",
     delay: "500",
   },
@@ -201,10 +203,28 @@ export const listProyek = [
     id: 6,
     gambar: Proyek6,
     nama: "Inovasi WADAH",
-    desk: "Website WADAH ini dibuat untuk pembelian air Kopi atau Teh dengan sistem pembayaran QRIS dengan menggunakan metode Payment Gateway Midtrans. Harga terjangkau sesuai dengan masing-masing volume",
-    tech: ["Laravel", "TailwindCSS", "MySQL", "Midtrans"],
+    desk: "Aplikasi sistem vending machine pintar untuk pembelian Kopi atau Teh dengan opsi volume (ml) dan harga yang dapat disesuaikan. Transaksi pembayaran terintegrasi dengan Payment Gateway Midtrans (QRIS). Sistem web ini terhubung langsung dengan mikrokontroler ESP32 via HTTP untuk mengontrol Relay (pompa air) dan membaca Water Flow Sensor sesuai pesanan. Aplikasi juga dilengkapi dengan fitur Chatbot pintar (dibangun dengan Python & model Ollama) untuk memandu pengguna.",
+    tech: ["Laravel", "TailwindCSS", "MySQL", "Midtrans", "Python", "Ollama", "ESP32"],
     link: "https://wadah.smkn9kotabekasi.sch.id",
     delay: "600",
+  },
+  {
+    id: 7,
+    gambar: Proyek7,
+    nama: "PMB Kampus Sekolah Tinggi Ilmu Hukum",
+    desk: "Sistem Informasi Penerimaan Mahasiswa Baru (PMB) komprehensif yang dirancang untuk mengoptimalkan strategi promosi kampus. Aplikasi ini dilengkapi dengan pemetaan geospasial menggunakan Leaflet.js untuk melacak lokasi asal sekolah pendaftar, beserta dashboard analitik (chart/diagram) persentase sebaran datanya. Sistem ini memfasilitasi manajemen kampanye O2O (Online to Offline); mencakup pelacakan konversi promosi online (Media Sosial, Website, Referensi) lengkap dengan manajemen anggarannya, serta pencatatan efektivitas promosi offline seperti kunjungan sekolah dan event. Sangat mendukung pengambilan keputusan strategis yang berbasis data (data-driven).",
+    tech: ["Laravel", "TailwindCSS", "MySQL", "jQuery", "Redis"],
+    link: "https://pmb.axiona.id/",
+    delay: "700",
+  },
+  {
+    id: 8,
+    gambar: Proyek8,
+    nama: "Company Profile Kampus Sekolah Tinggi Ilmu Hukum",
+    desk: "Website Company Profile interaktif untuk Sekolah Tinggi Ilmu Hukum (STIH) yang dirancang sebagai pusat informasi digital komprehensif kampus. Platform ini menyajikan informasi lengkap seputar profil institusi, mulai dari Visi & Misi, Struktur Organisasi, hingga detail Akademik dan Program Studi. Dilengkapi juga dengan showcase Capaian & Prestasi, direktori Fasilitas, Testimoni Alumni, serta portal informasi Penerimaan Mahasiswa Baru (PMB).",
+    tech: ["VueJS", "TailwindCSS", "jQuery"],
+    link: "https://stih.axiona.id/",
+    delay: "800",
   },
 ];
 
