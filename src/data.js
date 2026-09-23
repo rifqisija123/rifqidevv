@@ -3,6 +3,9 @@ import FotoRifqi from "/assets/foto-portofolio-rifqi.jpeg"
 import cv from "/assets/CV_Rifqi.pdf";
 import smkn9 from "/assets/smkn9.png";
 import sija from "/assets/sija.png";
+import bsi from "/assets/bsi.png";
+import unggulBsi from "/assets/unggul-bsi.png";
+
 
 const Image = {
   HeroImage,
@@ -361,6 +364,28 @@ export const listSertifikat = [
 export const listPendidikan = [
   {
     id: 1,
+    instansi: "Universitas Bina Sarana Informatika",
+    jurusan: "Teknik Informatika (S1)",
+    tahun: "2026 - 2030",
+    logoSekolah: bsi,
+    logoJurusan: unggulBsi,
+    deskripsi: "Program Sarjana (S1) Teknik Informatika di Universitas Bina Sarana Informatika (UBSI) berfokus pada penguasaan teknologi informasi, rekayasa perangkat lunak, kecerdasan buatan, Internet of Things (IoT), cloud computing, serta keamanan siber. Kurikulum dirancang secara komprehensif untuk mencetak profesional IT yang kompeten, inovatif, dan berjiwa entrepreneurship.",
+    poinPembelajaran: [
+      "Mempelajari Logika & Algoritma, Dasar Pemrograman, dan Pemrograman Berbasis Objek (PBO)",
+      "Mempelajari Arsitektur Komputer, Sistem Operasi, serta Struktur Data & Matematika Diskrit",
+      "Mempelajari Jaringan Komputer & Praktikum, Jaringan Komputer Lanjut, dan Network Programming",
+      "Mempelajari Web Programming (I & II) serta Layanan dan Aplikasi Web",
+      "Mempelajari Mobile Programming, Mobile Computing, Mobile Commerce, dan Mobile Game",
+      "Mempelajari Kecerdasan Buatan (AI), Pembelajaran Mesin (Machine Learning), dan Data Mining",
+      "Mempelajari Rekayasa Perangkat Lunak (RPL), Internet of Things (IoT), dan Cloud Computing",
+      "Mempelajari Keamanan & Penjaminan Informasi, Pengolahan Citra, serta Interaksi Manusia Komputer",
+      "Mempelajari Manajemen Proyek Perangkat Lunak, Etika Profesi TIK, dan Entrepreneurship",
+      "Pelaksanaan Praktik Kerja Lapangan (PKL), Kuliah Kerja Nyata (KKN), dan Skripsi"
+    ],
+    delay: "400",
+  },
+  {
+    id: 2,
     instansi: "SMKN 9 Kota Bekasi",
     jurusan: "Sistem Informasi Jaringan dan Aplikasi (SIJA)",
     tahun: "Juli 2022 - Mei 2026",
